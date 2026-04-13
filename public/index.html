@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Produtos</title>
+    <!-- Link para o arquivo CSS externo para estilização da página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Container principal que centraliza o conteúdo da página -->
+    <div class="container">
+        <h1>📦 Gestão de Produtos</h1>
+
+        <!-- Formulário de Cadastro/Edição -->
+        <section class="form-section">
+            <!-- Título do formulário, que muda entre "Novo Produto" e "Editando Produto" -->
+            <h2 id="form-title">Novo Produto</h2>
+            <form id="produto-form">
+                <!-- Campo oculto para armazenar o ID do produto em caso de edição -->
+                <input type="hidden" id="produto-id">
+                <div class="form-group">
+                    <!-- Campo para o nome do produto -->
+                    <input type="text" id="nome" placeholder="Nome do Produto" required>
+                    <!-- Campo para o preço do produto, aceita valores decimais -->
+                    <input type="number" id="preco" step="0.01" placeholder="Preço (ex: 10.50)" required>
+                </div>
+                <div class="form-group">
+                    <!-- Campo para a quantidade em estoque do produto -->
+                    <input type="number" id="estoque" placeholder="Estoque" required>
+                    <!-- Campo para a categoria do produto -->
+                    <input type="text" id="categoria" placeholder="Categoria" required>
+                </div>
+                <div class="form-buttons">
+                    <!-- Botão para salvar (cadastrar ou atualizar) o produto -->
+                    <button type="submit" class="btn-save">Salvar Produto</button>
+                    <!-- Botão para cancelar a edição, visível apenas durante a edição -->
+                    <button type="button" id="btn-cancel" class="btn-cancel" style="display:none;">Cancelar
+                        Edição</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção de Busca de Produtos -->
+        <section class="search-section">
+            <h2>Busca de Produtos</h2>
+            <div class="search-box">
+                <!-- Campo de entrada para digitar o termo de busca (ID ou Nome) -->
+                <input type="text" id="search-input" placeholder="Digite o ID ou o Nome para pesquisar...">
+                <!-- Botão para acionar a função de busca -->
+                <button onclick="buscar()">Buscar</button>
+                <!-- Botão para limpar a busca e mostrar todos os produtos novamente -->
+                <button onclick="carregarProdutos()" class="btn-clear">Mostrar Todos</button>
+            </div>
+        </section>
+
+        <!-- Tabela de Dados -->
+        <section class="table-section">
+            <!-- Tabela onde os produtos serão exibidos -->
+            <table>
+                <thead>
+                    <tr>
+                        <!-- Cabeçalhos da tabela -->
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Categoria</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <!-- Corpo da tabela onde os dados dos produtos serão inseridos via JavaScript -->
+                <tbody id="produtos-tabela"></tbody>
+            </table>
+        </section>
+        <!-- Link para o arquivo JavaScript externo que contém a lógica da página -->
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

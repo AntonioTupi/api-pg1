@@ -4,6 +4,7 @@
 
 // Importar o Express
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
@@ -13,6 +14,9 @@ const PORT = 3000;
 
 // Middleware para processar JSON no body das requisições
 app.use(express.json());
+
+// Servir arquivos estáticos da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 // ============================================================
 // IMPORTAR ROTAS

@@ -186,6 +186,23 @@ async function buscarPorCategoria(req, res) {
 }
 
 // ============================================================
+// FUNÇÃO: buscarPorNome (ASSÍNCRONA)
+// ROTA: GET /produtos/nome/:nome
+// ============================================================
+async function buscarPorNome(req, res) {
+    try {
+        const { nome } = req.params;
+        const produtos = await ProdutoModel.buscarPorNome(nome);
+        res.status(200).json(produtos);
+    } catch (erro) {
+        res.status(500).json({
+            mensagem: 'Erro ao buscar produtos por nome',
+            erro: erro.message
+        });
+    }
+}
+
+// ============================================================
 // EXPORTAR TODAS AS FUNÇÕES
 // ============================================================
 module.exports = {
@@ -194,5 +211,6 @@ module.exports = {
     criar,
     atualizar,
     deletar,
-    buscarPorCategoria
+    buscarPorCategoria,
+    buscarPorNome
 };

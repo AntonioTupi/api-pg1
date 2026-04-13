@@ -1,0 +1,179 @@
+/* Estilos globais para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte padrão */
+    background: #f4f7f6;
+    /* Cor de fundo suave */
+    color: #333;
+    /* Cor do texto principal */
+    margin: 0;
+    /* Remove margens padrão do body */
+    padding: 20px;
+    /* Espaçamento interno */
+}
+
+/* Estilo para o container principal que envolve todo o conteúdo */
+.container {
+    max-width: 1000px;
+    /* Largura máxima do container */
+    margin: auto;
+    /* Centraliza o container na página */
+    background: white;
+    /* Fundo branco para o conteúdo */
+    padding: 30px;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Estilos para títulos h1 e h2 */
+h1,
+h2 {
+    color: #2c3e50;
+    /* Cor dos títulos */
+    border-bottom: 2px solid #eee;
+    /* Linha inferior para separar */
+    padding-bottom: 10px;
+    /* Espaçamento abaixo da linha */
+}
+
+/* Margem inferior para as seções principais */
+.form-section,
+.search-section,
+.table-section {
+    margin-bottom: 40px;
+}
+
+/* Grupo de campos do formulário */
+.form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para campos de input dentro de um grupo */
+.form-group input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Botões do formulário */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo base para todos os botões */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Estilos específicos para cada tipo de botão */
+.btn-save {
+    background: #27ae60;
+    color: white;
+}
+
+/* Botão Salvar */
+.btn-save:hover {
+    background: #219150;
+}
+
+/* Efeito hover */
+.btn-cancel {
+    background: #95a5a6;
+    color: white;
+}
+
+/* Botão Cancelar */
+.btn-edit {
+    background: #3498db;
+    color: white;
+    margin-right: 5px;
+}
+
+/* Botão Editar */
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Botão Excluir */
+.btn-clear {
+    background: #7f8c8d;
+    color: white;
+}
+
+/* Botão Limpar/Mostrar Todos */
+
+/* Caixa de busca */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+/* Campo de input da busca */
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Tabela de produtos */
+table {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    border-collapse: collapse;
+    /* Remove espaçamento entre as bordas das células */
+    margin-top: 15px;
+    /* Margem superior */
+}
+
+/* Estilo para cabeçalhos e células da tabela */
+th,
+td {
+    text-align: left;
+    /* Alinhamento do texto à esquerda */
+    padding: 15px;
+    /* Espaçamento interno */
+    border-bottom: 1px solid #eee;
+    /* Borda inferior para cada linha */
+}
+
+/* Estilo específico para os cabeçalhos da tabela */
+th {
+    background: #f8f9fa;
+    /* Fundo levemente cinza */
+    color: #7f8c8d;
+    /* Cor do texto */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    font-size: 12px;
+    /* Tamanho da fonte */
+}
+
+/* Efeito hover nas linhas da tabela */
+tr:hover {
+    background: #f9f9f9;
+}
+
+/* Estilo para campos de input quando estão em foco */
+input:focus {
+    outline: none;
+    /* Remove o contorno padrão do navegador */
+    border-color: #3498db;
+    /* Altera a cor da borda */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    /* Adiciona uma sombra */
+}

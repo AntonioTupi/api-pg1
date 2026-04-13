@@ -126,6 +126,23 @@ async function buscarPorCategoria(categoria) {
 }
 
 // ============================================================
+// FUNÇÃO: buscarPorNome
+// DESCRIÇÃO: Filtra produtos por nome
+// PARÂMETRO: nome (string)
+// RETORNO: Promise com array de produtos
+// ============================================================
+async function buscarPorNome(nome) {
+    const sql = 'SELECT * FROM produtos WHERE nome ILIKE $1 ORDER BY id';
+
+    const result = await pool.query(
+        sql,
+        [`%${nome}%`]
+    );
+
+    return result.rows;
+}
+
+// ============================================================
 // EXPORTAR TODAS AS FUNÇÕES
 // ============================================================
 module.exports = {
@@ -134,5 +151,6 @@ module.exports = {
     criar,
     atualizar,
     deletar,
-    buscarPorCategoria
+    buscarPorCategoria,
+    buscarPorNome
 };
