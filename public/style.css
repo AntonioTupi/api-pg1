@@ -16,7 +16,7 @@ body {
 .container {
     max-width: 1000px;
     /* Largura máxima do container */
-    margin: auto;
+    margin: 20px auto;
     /* Centraliza o container na página */
     background: white;
     /* Fundo branco para o conteúdo */
@@ -26,6 +26,59 @@ body {
     /* Cantos arredondados */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Sombra suave */
+    flex: 1;
+}
+
+/* Novos estilos para Header, Nav e Footer */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Estilos para a Home */
+.home-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 /* Estilos para títulos h1 e h2 */
